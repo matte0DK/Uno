@@ -4,6 +4,7 @@ import java.awt.*;
 
 public class UnoCard {
 
+    // INSTANCE VARIABLES
     enum Color {
         Red, Blue, Green, Yellow, Wild;
 
@@ -27,13 +28,13 @@ public class UnoCard {
     private final Color color;
     private final Value value;
 
-//    constructor
+    // CONSTRUCTOR //
     public UnoCard (final Color color,final Value value) {
         this.color = color;
         this.value = value;
     }
 
-//    getters
+    // GETTERS //
     public Color getColor(){
         return this.color;
     }
@@ -41,7 +42,7 @@ public class UnoCard {
         return this.value;
     }
 
-//    methode om kleur en waarde te zien ipv geheugenadres, checkmethode
+    // METHOD: MAKING COLOR AND VALUE VISIBLE TO US INSTEAD OF MEMORY-ADRES, !check-method! //
     public String toString() {
         return color + "-" + value;
     }
