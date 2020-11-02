@@ -27,21 +27,18 @@ public class Game {
     // var to keep track of direction the game go's when a player hits a reverse card.
 
     // CONSTRUCTOR //
-    public Game(String[] pids) {
-        deck = new UnoDeck();
-        deck.shuffle();
-        stockPile = new ArrayList<UnoCard>();
-        // first initialise deck.
-        // than shuffle the deck.
-        // initialise stockpile with an arraylist of unoCards.
+    public Game(String[] pIds) {
+        deck = new UnoDeck();                   // first initialise deck.
+        deck.shuffle();                         // than shuffle the deck.
+        stockPile = new ArrayList<UnoCard>();   // initialise stockpile with an arraylist of unoCards.
 
-        playerIds = pids;
+        playerIds = pIds;
         currentPlayer = 0;
         gameDirection = false;
 
         playerHand = new ArrayList<ArrayList<UnoCard>>();
 
-        for (int i = 0; i < pids.length; i++) {
+        for (int i = 0; i < pIds.length; i++) {
             ArrayList<UnoCard> hand = new ArrayList<UnoCard>(Arrays.asList(deck.drawCard(7)));
             // creating a 'hand' of unoCards, wich is a new arrayList of UnoCards.
             // and filled it with from our UnoDeck (deck var).
